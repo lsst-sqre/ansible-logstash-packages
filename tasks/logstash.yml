@@ -1,0 +1,5 @@
+---
+# Configure the Logstash service.
+
+- name: Start the Logstash service.
+  service: name=logstash state=started
