@@ -22,6 +22,9 @@ galaxy_info:
   #  - squeeze
   #  - wheezy
   galaxy_tags:
-    - system
+    - centos
+    - elastic
     - monitoring
+    - system
+    - ubuntu
 dependencies: []
