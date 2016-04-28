@@ -1,6 +1,6 @@
 galaxy_info:
   author: J. Matt Peterson
-  description: LSST SQuaRE's Logstash deploy.
+  description: Logstash v 5.0 for LSST SQuaRE.
   company: LSST SQuaRE
   issue_tracker_url: https://github.com/lsst-sqre/ansible-logstash-packages/issues
   license: MIT
@@ -27,4 +27,5 @@ galaxy_info:
     - monitoring
     - system
     - ubuntu
-dependencies: []
+dependencies:
+  - role: jmatt.java-packages
