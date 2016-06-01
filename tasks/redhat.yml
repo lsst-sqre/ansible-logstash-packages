@@ -1,0 +1,14 @@
+---
+# Install Logstash packages on redhat base distributions.
+
+- name: Add the Logstash RPM key.
+  rpm_key: state=present key=https://packages.elastic.co/GPG-KEY-elasticsearch
+
+- name: Add the Logstash repository.
+  yum_repository:
+    name: Logstash-repository
+    description: Logstash repository for 5.x packages.
+    baseurl: http://packages.elastic.co/logstash/5.0/centos
+    gpgcheck: yes
+    enabled: yes
+    file: logstash

@@ -1,0 +1,17 @@
+---
+# Install Logstash packages on debian based distributions.
+
+- name: Add Logstash apt key.
+  apt_key: url=https://packages.elastic.co/GPG-KEY-elasticsearch state=present
+
+- name: Install apt-transport-https dependency.
+  apt: name=apt-transport-https update_cache=yes state=latest install_recommends=no
+
+- name: Install Logstash repository.
+  apt_repository: repo='deb http://packages.elastic.co/logstash/5.0/debian stable main' state=present
+
+- name: Install Logstash package.
+  apt: name=logstash update_cache=yes state=latest install_recommends=no
+
+- name: Configure Logstash.
+  include: logstash.yml
